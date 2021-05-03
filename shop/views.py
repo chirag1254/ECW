@@ -12,6 +12,15 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 
+
+
+def index(request):
+    login = 'csx.pythonanywhere.com/login/'
+    signup = 'csx.pythonanywhere.com/signup/'
+    params = {'login': login,'signup': signup }
+    return render(request,'shop/index.html',params)
+
+
 @api_view(['POST'])
 def signup(request):
     if request.method == 'POST':
