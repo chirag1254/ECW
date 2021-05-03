@@ -22,6 +22,8 @@ urlpatterns = [
     path('signup/',views.signup,name = 'signup'),
     path('login/',CustomAuthToken.as_view(),name = 'login'),
     path('',views.index, name = 'index'),
+    path('product/<int:id>', views.ProductView.as_view(),name = 'product'),
+
 
 
 ]
