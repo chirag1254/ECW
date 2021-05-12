@@ -48,9 +48,13 @@ class ProductView(APIView):
     def get(self, request):
         data = request.data
         
+        Keys = []
+        for key in data.keys():
+            Keys.append(key)
         
         
-        if 'id' in data.keys():
+        if 'id' in Keys:
+            id = data['id'] 
             product = Product.objects.get(id = id)
             serializer = ProductSerializer(product)
             return Response(serializer.data)
