@@ -2,6 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
+from .models import Product
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
@@ -40,3 +41,12 @@ class RegistrationSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+
+
+
+
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta :
+        model = Product
+        fields = ['product_name','small_desc','desc','pub_date','category','subcategory', 'price','image']

@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-v^^9ek)n#5#mzstwql9cqir@=n@61x!!48qsc6$*=s66u_9hd9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+<<<<<<< HEAD
+ALLOWED_HOSTS = ['csx.pythonanywhere.com','127.0.0.1']
+=======
 ALLOWED_HOSTS = ['127.0.0.1','ecommercewebsitecs.herokuapp.com']
+>>>>>>> master
 
 
 # Application definition
@@ -38,9 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'shop.apps.ShopConfig',
     'rest_framework.authtoken'
 ]
+
 
 
 REST_FRAMEWORK = {
@@ -56,7 +62,11 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+<<<<<<< HEAD
+    'corsheaders.middleware.CorsMiddleware',
+=======
     'whitenoise.middleware.WhiteNoiseMiddleware',
+>>>>>>> master
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -65,12 +75,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'ECW.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,15 +143,26 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_URL = '/static/'
+import os
+STATIC_URL= "/static/"
+MEDIA_ROOT= os.path.join(BASE_DIR, "media")
+MEDIA_URL="/media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
+
 import os
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+CORS_ORIGIN_ALLOW_ALL = True
+=======
+import os
+
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+>>>>>>> master

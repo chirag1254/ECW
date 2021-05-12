@@ -2,6 +2,7 @@ asgiref==3.3.4
 certifi==2020.12.5
 chardet==3.0.4
 Django==3.2
+django-cors-headers==3.7.0
 djangorestframework==3.12.4
 djangorestframework-jwt==1.11.0
 djangorestframework-simplejwt==4.6.0
@@ -12,6 +13,7 @@ PyJWT==1.7.1
 =======
 heroku==0.1.4
 idna==2.8
+Pillow==8.2.0
 PyJWT==1.7.1
 python-dateutil==1.5
 >>>>>>> main
