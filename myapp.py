@@ -1,7 +1,6 @@
 import json
 import datetime
 
-data = {'email': 'test@test.com','username':'test','password':'12345778','password2':'12345778','first_name':'foo','last_name':'test'}
+data = {'product_name':'jeans','small_desc':"jeans",'desc':'jeans','pub_date':'2021-05-03','category':'clothings','subcategory':'jeans', 'price':'1500','image':''}
 print(json.dumps(data))
 
-print(type(datetime.timedelta(days=10)))
