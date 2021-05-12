@@ -1,5 +1,6 @@
 .vscode/
 myvenv/
+<<<<<<< HEAD
 ECW\__pycache__/
 
 
@@ -54,3 +55,6 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
+=======
+__pycache__/
+>>>>>>> master

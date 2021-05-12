@@ -19,6 +19,7 @@ class CustomAuthToken(ObtainAuthToken):
         })
 
 urlpatterns = [
+    path('',views.index,name = 'index'),
     path('signup/',views.signup,name = 'signup'),
     path('login/',CustomAuthToken.as_view(),name = 'login'),
     path('',views.index, name = 'index'),
